@@ -1,4 +1,5 @@
 require "pp"
+require "dotenv/load"
 
 class Hello
   include Faktory::Job
