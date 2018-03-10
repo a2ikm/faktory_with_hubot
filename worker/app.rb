@@ -15,6 +15,6 @@ class Hello
     user = message["user"]["name"]
     channel = message["room"]
     text = "@#{user} Hi"
-    SLACK.chat_postMessage(channel: channel, text: text)
+    SLACK.chat_postMessage(channel: channel, text: text, link_names: true)
   end
 end
