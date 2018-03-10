@@ -11,5 +11,7 @@ services:
       context: ./hubot
     volumes:
       - ./hubot:/hubot
+    environment:
+      FAKTORY_URL: faktory:7419
     depends_on:
       - faktory
