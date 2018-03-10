@@ -1,0 +1,7 @@
+version: '3'
+services:
+  hubot:
+    build:
+      context: ./hubot
+    volumes:
+      - ./hubot:/hubot
