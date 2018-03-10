@@ -1,1 +1,1 @@
-web: bin/hubot-dotenv -a slack
+web: dotenv bin/hubot -a slack

@@ -2,4 +2,4 @@ FROM node:alpine
 
 RUN mkdir /hubot
 WORKDIR /hubot
-CMD bin/hubot-dotenv --adapter slack
+CMD dotenv bin/hubot --adapter slack
