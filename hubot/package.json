@@ -5,6 +5,7 @@
   "author": "a2ikm",
   "description": "A simple helpful robot for your Company",
   "dependencies": {
+    "faktory-client": "^0.5.0",
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.2",
     "hubot-dotenv": "^1.0.0",
