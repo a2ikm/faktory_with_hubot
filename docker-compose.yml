@@ -15,3 +15,13 @@ services:
       FAKTORY_URL: faktory:7419
     depends_on:
       - faktory
+  worker:
+    build:
+      context: ./worker
+    volumes:
+      - ./worker:/worker
+    environment:
+      FAKTORY_PROVIDER: FAKTORY_URL
+      FAKTORY_URL: tcp://faktory:7419
+    depends_on:
+      - faktory
