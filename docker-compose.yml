@@ -1,7 +1,15 @@
 version: '3'
 services:
+  faktory:
+    image: contribsys/faktory
+    volumes:
+      - ./faktory/data:/var/lib/faktory
+    ports:
+      - 7420:7420
   hubot:
     build:
       context: ./hubot
     volumes:
       - ./hubot:/hubot
+    depends_on:
+      - faktory
