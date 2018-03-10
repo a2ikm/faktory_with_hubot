@@ -7,7 +7,7 @@ module.exports = (robot => {
     jid = await faktory.push({
       jobtype: "Hello",
       queue: "hello",
-      args: [res.message.user, res.message.text, res.message.room]
+      args: [res.message]
     })
     res.send(`jid = ${jid}`)
   })

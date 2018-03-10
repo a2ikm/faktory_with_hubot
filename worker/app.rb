@@ -11,8 +11,10 @@ SLACK.auth_test
 class Hello
   include Faktory::Job
 
-  def perform(user, text, room)
-    text = "@#{user["name"]} Hi"
-    SLACK.chat_postMessage(channel: room, text: text)
+  def perform(message)
+    user = message["user"]["name"]
+    channel = message["room"]
+    text = "@#{user} Hi"
+    SLACK.chat_postMessage(channel: channel, text: text)
   end
 end
