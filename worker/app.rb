@@ -8,6 +8,8 @@ end
 SLACK = Slack::Web::Client.new
 SLACK.auth_test
 
+SLACK_USERNAME = "fabot"
+
 class Hello
   include Faktory::Job
 
@@ -15,6 +17,6 @@ class Hello
     user = message["user"]["name"]
     channel = message["room"]
     text = "@#{user} Hi"
-    SLACK.chat_postMessage(channel: channel, text: text, link_names: true)
+    SLACK.chat_postMessage(channel: channel, text: text, link_names: true, username: SLACK_USERNAME)
   end
 end
